@@ -7,6 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -97,10 +98,11 @@ input, select, textarea {
 		transition: none !important;
 	}
 
+	/* FONTS ARE HERE and TEXT COLORS */
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
-		color: #919499;
+		color: #484d55;
 		font-size: 14pt;
 		line-height: 1.75em;
 		letter-spacing: 0.025em;
@@ -122,7 +124,7 @@ input, select, textarea {
 		-ms-transition: color .25s ease-in-out;
 		transition: color .25s ease-in-out;
 		text-decoration: underline;
-		color: #717479;
+		color: #484d55;
 	}
 
 		a:hover {
@@ -135,7 +137,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
+		border-left: solid 0.5em #484d55;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -146,7 +148,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 1px #484d55;
 		margin: 2em 0 2em 0;
 	}
 
@@ -173,6 +175,7 @@ input, select, textarea {
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
 	}
+
 
 /* Container */
 
@@ -1464,7 +1467,7 @@ input, select, textarea {
 		}
 
 		header.style1 p {
-			color: #b1b4b9;
+			color: #484d55;
 			display: block;
 			margin: 1.15em 0 0 0;
 			font-size: 1.3em;
@@ -1483,7 +1486,8 @@ input, select, textarea {
 		}
 
 			table.default tbody tr:nth-child(2n+2) {
-				background: #f4f4f4;
+				/* background: #f4f4f4; */
+				background: #484d55;
 			}
 
 			table.default td {
@@ -1498,11 +1502,14 @@ input, select, textarea {
 
 			table.default thead {
 				background: #484d55;
-				color: #fff;
+				/* background: #EF8FC4; */
+				/* color: #fff; */
+				color: #484d55; 
 			}
 
 			table.default tfoot {
-				background: #eee;
+				/* background: #eee; */
+				background: #484d55;
 			}
 
 /* Form */
@@ -1672,7 +1679,7 @@ input, select, textarea {
 		input[type="reset"].style1,
 		button.style1,
 		.button.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #ED5D9A url("images/overlay.png");
 			color: #fff;
 		}
 
@@ -1681,7 +1688,7 @@ input, select, textarea {
 			input[type="reset"].style1:hover,
 			button.style1:hover,
 			.button.style1:hover {
-				background-color: #f98780;
+				background-color: #F18DBC;
 			}
 
 			input[type="button"].style1:active,
@@ -1689,7 +1696,7 @@ input, select, textarea {
 			input[type="reset"].style1:active,
 			button.style1:active,
 			.button.style1:active {
-				background-color: #d96760;
+				background-color: #F18DBC;
 			}
 
 		input[type="button"].style2,
@@ -1850,7 +1857,7 @@ input, select, textarea {
 		}
 
 		.feature-list h3 {
-			color: #e97770 !important;
+			color: #484d55 !important;
 			margin: -0.35em 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -1880,6 +1887,38 @@ input, select, textarea {
 		}
 
 /* Icons */
+
+ul.icons {
+	position: relative;
+	background: rgba(128, 128, 128, 0.05);
+	border-radius: 4em;
+	display: inline-block;
+	padding: 0.35em 0.75em 0.35em 0.75em;
+	font-size: 2em; /* CHANGED THIS TO CHANGE ICON SIZE */
+	cursor: default;
+	list-style: none;
+}
+
+	ul.icons li {
+		display: inline-block;
+		padding-left: 0;
+	}
+
+		ul.icons li a {
+			display: inline-block;
+			background: none;
+			width: 2.5em;
+			height: 2.5em;
+			line-height: 2.5em;
+			text-align: center;
+			border-radius: 100%;
+			border: 0;
+			color: inherit;
+		}
+
+			ul.icons li a:hover {
+				color: #ef8376;
+			} */
 
 	.icon {
 		text-decoration: none;
@@ -2002,35 +2041,37 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #FACEE5 url("images/overlay.png");
 			color: #eee;
-			color: rgba(255, 255, 255, 0.75);
+			/* color: rgba(255, 255, 255, 0.75); */
+			color: #484d55;
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
-				color: #fff;
-			}
-
-			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
-				color: #fff;
-			}
-
-		.wrapper.style2 {
-			background: #fff;
-		}
-
-			.wrapper.style2 .title {
-				background: #fff;
+				background: #FACEE5 url("images/overlay.png");
 				color: #484d55;
 			}
 
+			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
+				color: #484d55;
+			}
+
+		.wrapper.style2 {
+			background: #FCE5F1;
+		}
+
+			.wrapper.style2 .title {
+				background: #FCE5F1;
+				color: #484d55;
+				/* color: #EF8FC4; */
+			}
+
 		.wrapper.style3 {
-			background: #f3f3f3 url("images/overlay.png");
+			background: #FACEE5 url("images/overlay.png");
 		}
 
 			.wrapper.style3 .title {
-				background: #f3f3f3 url("images/overlay.png");
+				background: #FACEE5 url("images/overlay.png");
 				color: #484d55;
 			}
 
@@ -2061,7 +2102,9 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		/* background: url("../../images/banner.jpg") center center; */
+		background: #F18DBC;
+		/* background: url("images/pinksparkles.gif"); */
 		background-size: cover;
 		padding: 0;
 	}
@@ -2099,7 +2142,8 @@ input, select, textarea {
 
 		#logo p {
 			color: #eee;
-			color: rgba(255, 255, 255, 0.5);
+			/* color: rgba(255, 255, 255, 0.5); */
+			/* color: #484d55; */
 			text-transform: uppercase;
 			margin: 1.25em 0 0 0;
 			display: block;
@@ -2223,9 +2267,10 @@ input, select, textarea {
 
 		#intro p.style2 {
 			font-weight: 700;
-			color: #fff;
+			color: #484d55;
 			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+			box-shadow: inset 0px 0px 1px 1px #E1228A;
+			/* rgba(255, 255, 255, 0.25); */
 			font-size: 2.75em;
 			letter-spacing: 0.075em;
 			line-height: 1.35em;
@@ -2261,7 +2306,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #e97770;
+			color: #484d55;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -2269,10 +2314,25 @@ input, select, textarea {
 
 /* Main */
 
-/* Footer */
+Footer
+
+	#footer .copyright {
+		text-align: center;
+		color: rgba(128, 128, 128, 0.75);
+		font-size: 0.8em;
+		cursor: default;
+	}
+
+		#footer .copyright a {
+		color: rgba(128, 128, 128, 0.75);
+		}
+
+			#footer .copyright a:hover {
+			color: rgba(212, 212, 212, 0.85);
+			}
 
 	#footer {
-		background: #282b34 url("images/overlay.png");
+		background: #F7BAD7 url("images/overlay.png");
 		color: #eee;
 		color: rgba(255, 255, 255, 0.5);
 		padding-bottom: 6em;
@@ -2283,7 +2343,7 @@ input, select, textarea {
 		}
 
 		#footer hr {
-			border-top-color: #333;
+			border-top-color: #F7BAD7;
 			border-top-color: rgba(255, 255, 255, 0.05);
 		}
 
@@ -2339,18 +2399,18 @@ input, select, textarea {
 			}
 
 		#footer .title {
-			background: #282b34 url("images/overlay.png");
-			color: #eee;
+			background: #F7BAD7 url("images/overlay.png");
+			color: #484d55;
 		}
 
 		#footer header.style1 {
 			padding-bottom: 6em;
 			margin-bottom: 6em;
-			border-bottom: solid 1px rgba(255, 255, 255, 0.05);
+			/* border-bottom: solid 1px rgba(255, 255, 255, 0.05); */
 		}
 
 			#footer header.style1 h2 {
-				color: #fff;
+				color: #484d55;
 			}
 
 			#footer header.style1 .p {
@@ -2368,6 +2428,15 @@ input, select, textarea {
 			#footer .feature-list h3:before {
 				background: #3d4249 url("images/overlay.png");
 			}
+			
+		#footer .contact {
+			text-align: center;
+		}
+	
+		#footer .contact p {
+			text-align: center;
+			margin: 0 0 3em 0;
+		}
 
 /* Copyright */
 
@@ -2982,4 +3051,29 @@ input, select, textarea {
 							margin-top: 0;
 						}
 
+	}
+
+	#sidebar > .inner {
+		display: -moz-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center; 
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		-moz-transition: opacity 1s ease;
+		-webkit-transition: opacity 1s ease;
+		-ms-transition: opacity 1s ease;
+		transition: opacity 1s ease;
+		min-height: 100%;
+		opacity: 1;
+		width: 100%;
 	}
