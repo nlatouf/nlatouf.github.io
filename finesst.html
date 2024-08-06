@@ -10,28 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			body {
-				margin: 0;
-				background: #000;
-				cursor: none; /* Hide default cursor */
-			}
-	
-			.sparkle {
-				position: fixed; /* Changed to fixed */
-				width: 10px;
-				height: 10px;
-				pointer-events: none; /* Prevent sparkles from capturing mouse events */
-				animation: fadeOut 1s forwards;
-			}
-	
-			@keyframes fadeOut {
-				to {
-					opacity: 0;
-					transform: scale(2);
-				}
-			}
-		</style>
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -42,7 +20,7 @@
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="index.html">Natasha Latouf</a></h1>
-						<p>NSF Research Fellow + PhD Candidate</p>
+						<p>NASA FINESST + NSF Graduate Research Fellow + PhD Candidate</p>
 					</div>
 
 				<!-- Nav -->
@@ -104,7 +82,7 @@
 
 										<section class="box">
 											<header>
-												<h2>My Statement</h2>
+												<h2>My Winning Statement</h2>
 											</header>
 											<p>Here is a pdf version of my entire statement, with all required components! Please note, since half of my thesis is about mentorship, I had a very
 												intense mentoring plan; <b>This is not required!</b> All you really need is just to write out what you and your advisor have agreed on, i.e. weekly meetings,
@@ -129,7 +107,7 @@
 							<div class="col-8 col-12-medium imp-medium">
 
 								<!-- Content -->
-									<div id="content">
+									<div class="collapsible-wrapper" id="content">
 										<article class="box post">
 											<header class="style1">
 												<h2>FINESST</h2>
@@ -151,16 +129,20 @@
 												<blockquote>If you are interested in applying for a FINESST with a NASA/JPL advisor, or any kind of co-advisor, go to the last section!</blockquote>
 											</p>
 
-											<h3 id="genoverview">General Overview:</h3>
+											<!-- <h3 id="genoverview">General Overview:</h3> -->
+											<button class="collapsible">General Overview</button>
+											<div class="collapsible-content" id="genoverview">
 											<p> The FINESST can cover up to 3 years of funding, but you can propose for as much as you would like! This means that if you're a more senior grad student, you can request
 												less money (which can sometimes strengthen your case!). The FINESST requires multiple sections: a Science and Technical Management section (6 pages), References and Acknowledgements (no page limit)
 												Open Science and Data Management Plan (OSDMP, 2 pages), a Research Readiness statement (1 page), a Mentoring Plan (2 pages), 2 pages of CVs for the FI (that's you!) and the PI,
 												Current and Pending Statements(no page limit), and a Budget and Narrative (2 pages). All of these must be submitted as one pdf file through NSPIRES, which is the website used for all NASA proposal submissions.
 												For further information about each section in detail, I again refer you to Michael Radke's website!
 											</p>
-
+											</div>
 											
-											<h3 id="thoughts">Anecdotal Thoughts and Advice:</h3>
+											<!-- <h3 id="thoughts">Anecdotal Thoughts and Advice:</h3> -->
+											<button class="collapsible">Anecdotal Thoughts and Advice</button>
+											<div class="collapsible-content" id="thoughts">
 											<p> I know; that seems like a lot. And to be honest, it is. The FINESST is meant to be your first foray into writing a proposal from start to finish as the PI (Or in this case, FI).
 												A large part of the FINESST that in my opinion was different from the GRFP was the amount of mental effort it exerted - I had to come up with a project I would actually complete,
 												and intelligently argue for it in 6 pages - which is a lot less space than you think it is. On top of that, creating all these documents such as a budget or a C&P, that I had never made before.
@@ -191,8 +173,11 @@
 												Same principal, do you prefer reading a textbook page that has images and summary lists, or just a large block of text? Right; it matters psychologically! This isn't a make or break point at all;
 												but I have found it to be very helpful for legibility and captivating interest.								
 											</p>
-											
-											<h3 id="advisor">Applying with a co-Advisor:</h3>
+											</div>
+
+											<!-- <h3 id="advisor">Applying with a co-Advisor:</h3> -->
+											<button class="collapsible">Applying with a co-Advisor</button>
+											<div class="collapsible-content" id="advisor">
 											<p> Some of you might be in the same position I found myself in: my university advisor (the chair of my committee) is NOT the person who I do my research with.
 												All of my research happens at NASA Goddard Space Flight Center (GSFC) with an advisor there. Or, maybe you do research with your university advisor, but you have an
 												equally important external advisor. Okay, so now what do you do? You have to provide a CV for the PI, and the PI CANNOT be a NASA employee - but if the CV of your university
@@ -202,6 +187,7 @@
 												Maybe you're like me and no one at your instition worked on your research of interest, so you looked elsewhere. Or maybe you just want to have more collaboration; or maybe your advisor is overburdened,
 												so even though you are their student, you have a co-advisor you rely on equally. Whatever the case, know that is it possible, but you just have to make sure to address it. You'll see the prime example in my statement!							
 											</p>
+											</div>
 										</article>
 										<!-- <div class="row gtr-150">
 											<div class="col-6 col-12-small">
@@ -330,6 +316,22 @@
             });
         });
     </script>
-
+	<script>
+		// JavaScript for collapsible elements
+		document.addEventListener("DOMContentLoaded", function() {
+			var coll = document.getElementsByClassName("collapsible");
+			for (var i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		});
+	</script>
 	</body>
 </html>

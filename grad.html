@@ -10,28 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			body {
-				margin: 0;
-				background: #000;
-				cursor: none; /* Hide default cursor */
-			}
-	
-			.sparkle {
-				position: fixed; /* Changed to fixed */
-				width: 10px;
-				height: 10px;
-				pointer-events: none; /* Prevent sparkles from capturing mouse events */
-				animation: fadeOut 1s forwards;
-			}
-	
-			@keyframes fadeOut {
-				to {
-					opacity: 0;
-					transform: scale(2);
-				}
-			}
-		</style>
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -42,7 +20,7 @@
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="index.html">Natasha Latouf</a></h1>
-						<p>NSF Research Fellow + PhD Candidate</p>
+						<p>NASA FINESST + NSF Graduate Research Fellow + PhD Candidate</p>
 					</div>
 
 				<!-- Nav -->
@@ -65,7 +43,7 @@
 											<li><a href="#">Sed feugiat</a></li>
 										</ul>
 									</li> -->
-									<li><a href="travel.html">Colloquium, Conferences, and Travel</a></li>
+									<!-- <li><a href="travel.html">Colloquium, Conferences, and Travel</a></li> -->
 								</ul>
 							</li>
 							<li><a href="Latouf_CV.pdf">Curriculum Vitae (CV)</a></li>
@@ -99,7 +77,7 @@
 												<h2>GRE Requirements and Application Fees</h2>
 											</header>
 											<p>This phenomenal spreadsheet details <b> every USA graduate program in physics and astronomy</b> with whether or not they require the GRE, 
-											application costs, fee waiver offers, and whether or not the school required GREs during COVID. Whether or not a school requires GREs is a very telling factor,
+											application costs, fee waiver offers, etc. Whether or not a school requires GREs is a very telling factor,
 											so choose wisely. I personally didn't apply to any school that required GREs!
 											</p>
 											<a href="https://docs.google.com/spreadsheets/d/19UhYToXOPZkZ3CM469ru3Uwk4584CmzZyAVVwQJJcyc/edit?usp=sharing" class="button style1">GRE and Fees</a>
@@ -113,8 +91,7 @@
 													<article class="box post-excerpt">
 														<a href="https://docs.google.com/spreadsheets/d/1M-juwBoYV6DiWt6Zfx31Y0_PuoTU8sg-UaFcEMffCCI/edit?usp=sharing" class="image left"><img src="images/googlesheets.png" alt="" /></a>
 														<h3><a href="https://docs.google.com/spreadsheets/d/1M-juwBoYV6DiWt6Zfx31Y0_PuoTU8sg-UaFcEMffCCI/edit?usp=sharing">Grad School Application Organizer</a></h3>
-														<p>This spreadsheet that I created while applying to grad school is publically available for all to use! It can help keep you organized, and you can 
-															share your letter writers into the sheet so they can see how you're doing, and update whether or not they have written and submitted your letter. 
+														<p>This spreadsheet that I created while applying to grad school is publically available for all to use! It can help keep you and your letter writers organized. 
 															Feel free to make a copy and use it!
 														</p>
 													</article>
@@ -123,8 +100,7 @@
 													<article class="box post-excerpt">
 														<a href="https://gradschoolshopper.com/" class="image left"><img src="images/aps.jpg" alt="" /></a>
 														<h3><a href="https://gradschoolshopper.com/">Grad School Shopper</a></h3>
-														<p>Grad School Shopper gives you the low down of every grad program. It's a great place to start when you're trying to learn the basics of a 
-															potential program - but make sure you reach out to trusted advisors and students as well!
+														<p>Grad School Shopper gives you the low down of every grad program. Make sure you still reach out to trusted advisors and students as well!
 														</p>
 													</article>
 												</li>
@@ -156,7 +132,7 @@
 							<div class="col-8 col-12-medium imp-medium">
 
 								<!-- Content -->
-									<div id="content">
+									<div class="collapsible-wrapper" id="content">
 										<article class="box post">
 											<header class="style1">
 												<h2>My Graduate School Experience</h2>
@@ -168,7 +144,8 @@
 											<!-- <a href="#" class="image featured">
 												<img src="images/pic01.jpg" alt="" />
 											</a> -->
-											<h3>Applications</h3>
+											<button class="collapsible">Application Process</button>
+											<div class="collapsible-content" id="apps">
 											<p>
 												The process of Grad School applications was not as odious as I had expected it to be. I had written an NSF GRFP and spent
 												a ton of time on writing that, which meant I was able to easily adapt it and apply to all the universities within a week 
@@ -191,8 +168,10 @@
 												<b>It does not mean you're a bad scientist or won't go to grad school if you do this!</b> In fact, many industries will pay for you to go to grad school! Every option
 												is a valid one. 
 											</p>
-											
-											<h3>Classes</h3>
+											</div>
+
+											<button class="collapsible">Graduate Classes</button>
+											<div class="collapsible-content" id="classes">											
 											<p>
 												The classes in grad school are a different beast to those in undergrad. At least for me, there was a huge knowledge leap between undergrad and grad level courses.
 												Now, some part of that may have been due to COVID, but nonetheless, I found myself caught in the whirlwind for sure. I am also not the best test taker. Read: I am a
@@ -227,8 +206,10 @@
 												and any decent advisor will understand that (i.e. this is a great litmus for a potential advisor!). In my view, the classes and quals portion of grad school was the absolute most difficult - so lean
 												on people, and ask for help openly. The worst thing that happens is that you need more help than expected - and that's not a bad thing.
 											</p>
-
-											<h3>Experience</h3>
+											</div>
+											
+											<button class="collapsible">My Experience</button>
+											<div class="collapsible-content" id="experience">
 											<p>
 												I am going to use this section to share my personal experience. I struggled in graduate school, quite a bit. It held some of the happiest and lowest moments of my life. I got married while in grad school, 
 												and met one of my absolute best friends for life, along with creating a very close community of friends that I love. I had the opportunity to discover a new research field that I am in now, and work with some
@@ -243,7 +224,7 @@
 												You will be okay. You will succeed. Success looks differently to everyone, but the common thread: true success means being happy. Find the thing that brings you happiness, over all else. Your job will never love you - but the
 												people in your life, your family or found family, will.
 												</p>
-
+											</div>	
 										</article>
 									</div>
 
@@ -444,7 +425,23 @@
                 sparkle.remove();
             });
         });
-    </script>
-
+    </script>	
+	<script>
+		// JavaScript for collapsible elements
+		document.addEventListener("DOMContentLoaded", function() {
+			var coll = document.getElementsByClassName("collapsible");
+			for (var i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		});
+	</script>
 	</body>
 </html>

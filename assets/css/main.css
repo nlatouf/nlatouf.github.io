@@ -1,6 +1,6 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
-
+/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900"); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /*
 	Escape Velocity by HTML5 UP
 	html5up.net | @ajlkn
@@ -75,6 +75,78 @@ input, select, textarea {
 
 /* Basic */
 
+	body {
+		margin: 0;
+		background: #000;
+		cursor: none; /* Hide default cursor */
+	}
+
+	.sparkle {
+		position: fixed; /* Changed to fixed */
+		width: 10px;
+		height: 10px;
+		pointer-events: none; /* Prevent sparkles from capturing mouse events */
+		animation: fadeOut 1s forwards;
+	}
+
+	@keyframes fadeOut {
+		to {
+			opacity: 0;
+			transform: scale(2);
+		}
+	}
+
+/* Collapsible styles scoped to a specific container */
+	.collapsible-wrapper .collapsible {
+	    background-color: #FCE5F1;
+	    color: #444;
+	    cursor: pointer;
+	    padding: 20px;
+	    width: 100%;
+	    border: none;
+	    text-align: left;
+	    outline: none;
+	    font-size: 15px;
+	    font-family: "Playfair Display", serif;
+	    border-bottom: 1px solid #ccc;
+	    position: relative;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	}
+
+	.collapsible-wrapper .collapsible:last-child {
+	    border-bottom: none;
+	}
+
+	.collapsible-wrapper .collapsible::after {
+	    content: '\f078';
+	    font-family: 'Font Awesome 5 Free';
+	    font-weight: 900;
+	    position: absolute;
+	    right: 10px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+
+	.collapsible-wrapper .active::after {
+	    content: '\f077';
+	}
+
+	.collapsible-wrapper .active, .collapsible-wrapper .collapsible:hover {
+	    background-color: #F18DBC;
+	}
+
+	.collapsible-wrapper .collapsible-content {
+	    padding: 20px;
+	    display: none;
+	    overflow: hidden;
+	    background-color: #FCE5F1;
+	    font-family: "Playfair Display", serif;
+	}
+
+
+
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -100,7 +172,7 @@ input, select, textarea {
 
 	/* FONTS ARE HERE and TEXT COLORS */
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: "Playfair Display", serif;
 		font-weight: 400;
 		color: #484d55;
 		font-size: 14pt;
@@ -137,7 +209,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 0.5em #484d55;
+		border-left: solid 0.5em #ED5D9A;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -1612,6 +1684,11 @@ input, select, textarea {
 			margin: 0 2em 2em 0;
 		}
 
+		.image.right {
+			float: right;
+			margin: 0 2em 2em 0;
+		}
+
 		.image.centered {
 			display: block;
 			margin: 0 0 2em 0;
@@ -1625,6 +1702,12 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
+			margin: 0 0 2em 0;
+		}
+		
+		.image.featured2 {
+			display: block;
+			width: 122%;
 			margin: 0 0 2em 0;
 		}
 
@@ -1662,9 +1745,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #f98780;
+			background-color: #f98780; 
 		}
-
 		input[type="button"].large,
 		input[type="submit"].large,
 		input[type="reset"].large,
@@ -2160,6 +2242,9 @@ ul.icons {
 		left: 0;
 		width: 100%;
 		text-align: center;
+		font-family: inherit; /* Reset font-family */
+		font-size: inherit;   /* Reset font-size */
+		padding: inherit; 
 	}
 
 		#nav > ul {
@@ -2181,8 +2266,9 @@ ul.icons {
 
 				#nav > ul > li > a, #nav > ul > li > span {
 					display: block;
-					color: #eee;
-					color: rgba(255, 255, 255, 0.75);
+					color: #FCE5F1;
+					color: #FCE5F1;
+					/* rgba(255, 255, 255, 0.75) */
 					text-transform: uppercase;
 					text-decoration: none;
 					font-size: 0.7em;
@@ -2198,16 +2284,18 @@ ul.icons {
 				}
 
 				#nav > ul > li:hover > a {
-					color: #fff;
+					color: #E1228A;
 				}
 
 				#nav > ul > li.active > a, #nav > ul > li.active > span {
-					color: #fff;
+					color: #E1228A;
 				}
 
 	.dropotron {
 		background: #222835 url("images/overlay.png");
+		/* #222835 */
 		background-color: rgba(44, 50, 63, 0.925);
+		/* rgba(44, 50, 63, 0.925) */
 		padding: 1.25em 1em 1.25em 1em;
 		border-radius: 0.35em;
 		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
@@ -2232,7 +2320,7 @@ ul.icons {
 			transition: all .25s ease-in-out;
 			display: block;
 			color: #eee;
-			color: rgba(255, 255, 255, 0.75);
+			color: #F18DBC;
 			text-transform: uppercase;
 			text-decoration: none;
 			font-size: 0.7em;
@@ -2250,14 +2338,14 @@ ul.icons {
 			}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #fff;
+				color: #E1228A;
 			}
 
 /* Intro */
 
 	#intro {
 		padding-bottom: 8em;
-		text-align: center;
+		text-align: left;
 	}
 
 		#intro p.style1 {
@@ -2267,7 +2355,7 @@ ul.icons {
 
 		#intro p.style2 {
 			font-weight: 700;
-			color: #484d55;
+			color: #F18DBC;
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px #E1228A;
 			/* rgba(255, 255, 255, 0.25); */
@@ -2276,6 +2364,7 @@ ul.icons {
 			line-height: 1.35em;
 			padding: 1em 0 1em 0;
 			margin-bottom: 1em;
+			text-align: center;
 		}
 
 			#intro p.style2 a {

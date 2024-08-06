@@ -10,28 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			body {
-				margin: 0;
-				background: #000;
-				cursor: none; /* Hide default cursor */
-			}
-	
-			.sparkle {
-				position: fixed; /* Changed to fixed */
-				width: 10px;
-				height: 10px;
-				pointer-events: none; /* Prevent sparkles from capturing mouse events */
-				animation: fadeOut 1s forwards;
-			}
-	
-			@keyframes fadeOut {
-				to {
-					opacity: 0;
-					transform: scale(2);
-				}
-			}
-		</style>
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -42,7 +20,7 @@
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="index.html">Natasha Latouf</a></h1>
-						<p>NSF Research Fellow + PhD Candidate</p>
+						<p>NASA FINESST + NSF Graduate Research Fellow + PhD Candidate</p>
 					</div>
 
 				<!-- Nav -->
@@ -104,7 +82,7 @@
 												</ul>
 											</nav>
 										</div> -->
-										<section class="box">
+										<!-- <section class="box">
 											<header>
 												<h2>Table of Contents</h2>
 											</header>
@@ -115,8 +93,8 @@
 												<li><a href="#timeline">My Recommended Timeline</a></li>
 												<li><a href="#grad">Grad School Applications (briefly)</a></li>
 											</ul>
-										</section>
-										<section class="box">
+										</section> -->
+										<!-- <section class="box"> -->
 											<!-- <header>
 												<h2>Ipsum nullam luctus</h2>
 											</header>
@@ -125,7 +103,7 @@
 											amet risus elit.</p>
 											<a href="#" class="button style1">Learn More</a> -->
 
-										</section>
+										<!-- </section> -->
 										<section class="box">
 											<header>
 												<h2>Winning Statements</h2>
@@ -171,7 +149,7 @@
 							<div class="col-8 col-12-medium imp-medium">
 
 								<!-- Content -->
-									<div id="content">
+									<div class="collapsible-wrapper" id="content">
 										<article class="box post">
 											<header class="style1">
 												<h2>NSF Graduate Research Fellowship Program</h2>
@@ -183,7 +161,9 @@
 											<!-- <a href="#" class="image featured">
 												<img src="images/pic01.jpg" alt="" />
 											</a> -->
-											<h3 id="genoverview">General Overview:</h3>
+											<!-- <h3 id="genoverview">General Overview:</h3> -->
+											<button class="collapsible">General Overview</button>
+											<div class="collapsible-content" id="genoverview">
 
 											<p>The National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP) is a 
 											5 year fellowship program which offers full funding for 3 of those years - however you are still a 
@@ -197,15 +177,21 @@
 											when you apply as an undergrad, but the second- and first-year grad students are graded against each other. For that 
 											reason, you’re usually better off applying in your second year as a grad student rather than the first, so you have 
 											more classes and, ideally, research under your belt!</p>
-											
-											<h3 id="nuts">The Nuts and Bolts:</h3>
+											</div>
+
+											<!-- <h3 id="nuts">The Nuts and Bolts:</h3> -->
+											<button class="collapsible">The Nuts and Bolts</button>
+											<div class="collapsible-content" id="nuts">
 
 											<p>The GRFP requires two statements: a personal background statement (3 pages maximum) and a graduate research 
 											statement (2 pages maximum). You will also need 3 letters of recommendation (It's 2 required, 3 recommended 
 											technically) and your full (unofficial) transcript. </p>
-									
-											<h3 id="details">Detailed Info:</h3>
-											
+											</div>
+
+											<!-- <h3 id="details">Detailed Info:</h3> -->
+											<button class="collapsible">Detailed Info</button>
+											<div class="collapsible-content" id="details">
+
 											<p>Your personal statement, in my opinion, is your time to shine. This is the place where you can explain who YOU are, 
 											and what your story is. Let me be clear: you are under no obligation, nor should you, provide information that makes 
 											you uncomfortable. Don’t trauma vomit just because you think you have to. Share only what you are comfortable with, 
@@ -261,9 +247,11 @@
 											research statement, and received review here, for an easy access example - this way, you can also see what resonated and 
 											what didn’t with my reviewers. Remember - I did not end up doing this research project! I work with a completely different 
 											advisor now, on completely different research, and that is okay!</p>
-											
-											<h3 id="timeline">My Recommended Timeline:</h3>
+											</div>
 
+											<!-- <h3 id="timeline">My Recommended Timeline:</h3> -->
+											<button class="collapsible">My Recommended Timeline</button>
+											<div class="collapsible-content" id="timeline">
 
 											<p><b>Spring Before Applying:</b> Start to think about who your advisor will be, what your research project will be, who your letter 
 											writers will be, and find out if your university has an Office of Fellowships! Many universities have an Office of Fellowships 
@@ -305,9 +293,12 @@
 											it is never later than the first week of April, so you have a chance to reach back out to any schools that rejected you and inform them 
 											of your win - sometimes they will let you in if they know you come with funding! You will receive the notification via email, and 
 											rejections + acceptances go out simultaneously in the early morning, around 8am EST. </p>
-
-											<h3 id="grad">Grad School Applications (briefly):</h3>
+											</div>
 											
+											<!-- <h3 id="grad">Grad School Applications (briefly):</h3> -->
+											<button class="collapsible">Grad School Applications</button>
+											<div class="collapsible-content" id="grad">
+
 											<p>IF you are interested in applying to grad schools, most (like 99%) of the advice you see above also applies to grad school applications. 
 											Ideally, you will be using the graduate research statement and personal background statement from the GRFP application to use for your 
 											grad school applications, with modifications as the school requests (for instance, change of length, or dividing the statements into 
@@ -321,6 +312,7 @@
 											I got into only one school during my application cycle, but for a research field I wasn’t interested in. I was already looking at jobs when 
 											I won the GRFP which was borne of luck. Different people take different journeys and that is completely okay. Find your support system, and 
 											make sure to lean on them through this process, because it is difficult. But you can do this!</p>
+											</div>
 										</article>
 										<!-- <div class="row gtr-150">
 											<div class="col-6 col-12-small">
@@ -449,6 +441,22 @@
 				});
 			});
 		</script>
-
+		<script>
+			// JavaScript for collapsible elements
+			document.addEventListener("DOMContentLoaded", function() {
+				var coll = document.getElementsByClassName("collapsible");
+				for (var i = 0; i < coll.length; i++) {
+					coll[i].addEventListener("click", function() {
+						this.classList.toggle("active");
+						var content = this.nextElementSibling;
+						if (content.style.display === "block") {
+							content.style.display = "none";
+						} else {
+							content.style.display = "block";
+						}
+					});
+				}
+			});
+		</script>
 	</body>
 </html>

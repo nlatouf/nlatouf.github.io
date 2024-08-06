@@ -11,27 +11,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			body {
-				margin: 0;
-				background: #000;
-				cursor: none; /* Hide default cursor */
+			#video-container {
+				position: fixed; /* Changed from absolute to fixed */
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				background-color: #000; /* Optional: Adds a background color to the video container */
+				z-index: 9999; /* Ensure the video is always on top */
 			}
-	
-			.sparkle {
-				position: fixed; /* Changed to fixed */
-				width: 10px;
-				height: 10px;
-				pointer-events: none; /* Prevent sparkles from capturing mouse events */
-				animation: fadeOut 1s forwards;
-			}
-	
-			@keyframes fadeOut {
-				to {
-					opacity: 0;
-					transform: scale(2);
-				}
+			iframe {
+				width: 100%;
+				height: 315px; /* Adjust height as needed */
 			}
 		</style>
+		<script src="https://www.youtube.com/iframe_api"></script>
+
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -42,7 +36,7 @@
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="index.html">Natasha Latouf</a></h1>
-						<p>NSF Research Fellow + PhD Candidate</p>
+						<p>NASA FINESST + NSF Graduate Research Fellow + PhD Candidate</p>
 					</div>
 
 				<!-- Nav -->
@@ -108,15 +102,15 @@
 											<ul class="style2">
 												<li>
 													<article class="box post-excerpt">
-														<a href="https://speakerdeck.com/nlatouf/latouf-dissertation-proposal" class="image left"><img src="images/proposaldefense.png" alt="" /></a>
-														<h3><a href="#">Proposal Defense</a></h3>
+														<a href="https://speakerdeck.com/nlatouf/latouf-dissertation-proposal" class="image left"><img src="images/jupatmos.png" alt="" /></a>
+														<h3><a href="https://speakerdeck.com/nlatouf/latouf-dissertation-proposal">Proposal Defense</a></h3>
 														<p>For a full summation of my work (both BARBIE and mentorship) up to April 2024, check out these slides.</p>
 													</article>
 												</li>
 												<li>
 													<article class="box post-excerpt">
-														<a href="https://speakerdeck.com/nlatouf/exploring-new-worlds-with-barbie-and-ken" class="image left"><img src="images/aot.png" alt="" /></a>
-														<h3><a href="#">Astronomy on Tap</a></h3>
+														<a href="https://speakerdeck.com/nlatouf/exploring-new-worlds-with-barbie-and-ken" class="image left"><img src="images/hotjupiter.png" alt="" /></a>
+														<h3><a href="https://speakerdeck.com/nlatouf/exploring-new-worlds-with-barbie-and-ken">Astronomy on Tap</a></h3>
 														<p>For a much more casual and basic description of my work, check out these slides.</p>
 													</article>
 												</li>
@@ -159,6 +153,9 @@
 												<!-- <h2>Bayesian Analysis of Remote Biosignature Identification on exoEarths (BARBIE)</h2> -->
 												<p>My research focuses on detecting and characterizing exoplanet atmospheres using nested sampling and retrievals. </p>
 											</header>
+											<a href="#" class="image featured">
+												<img src="images/longsystem.png" alt="" />
+											</a>
 											<p>One of the foundational goals of the Habitable Worlds Observatory (HWO) is detecting 
 											diagnostic spectral features in spectroscopic measurements of exoplanets using high-contrast 
 											imaging; it is also one of the first steps on the path to determining planet habitability for 
@@ -240,7 +237,7 @@
 													<header>
 														<h2>BARBIE</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/BARBIE_logo.png" alt="" /></a>
+													<a href="https://ui.adsabs.harvard.edu/user/libraries/nVBLjogkSdaQyNvCHN_gfA" class="image featured"><img src="images/BARBIE_logo.png" alt="" /></a>
 													<p>Click here to read the BARBIE project published works on NASA ADS!</p>
 													<a href="https://ui.adsabs.harvard.edu/user/libraries/nVBLjogkSdaQyNvCHN_gfA" class="button style1">NASA ADS</a>
 												</section>
@@ -250,7 +247,7 @@
 													<header>
 														<h2>BARBIE & Yields</h2>
 													</header>
-													<a href="#" class="image featured"><img src="images/yields.png" alt="" /></a>
+													<a href="https://ui.adsabs.harvard.edu/abs/2024JATIS..10a4005S/abstract" class="image featured"><img src="images/roundsystem.png" alt="" /></a>
 													<p>Click here to read the BARBIE & yields published works on NASA ADS!</p>
 													<a href="https://ui.adsabs.harvard.edu/abs/2024JATIS..10a4005S/abstract" class="button style1">NASA ADS</a>
 												</section>
@@ -332,8 +329,8 @@
                     </div>
                 </div>
             </section>
+    
     </div>
-
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -357,5 +354,5 @@
             });
         });
     </script>
-	</body>
+</body>
 </html>
