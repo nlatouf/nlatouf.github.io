@@ -2184,8 +2184,8 @@ ul.icons {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		/* background: url("../../images/banner.jpg") center center; */
-		background: #F18DBC;
+		background: url("../../images/banner.jpg") center center;
+		/* background: #F18DBC; */
 		/* background: url("images/pinksparkles.gif"); */
 		background-size: cover;
 		padding: 0;
